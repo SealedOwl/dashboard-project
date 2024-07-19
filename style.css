@@ -13,6 +13,17 @@
     --white: #fff;
     --h1: 1.8rem;
     --h2: 1.4rem;
+    --h3: 1.1rem;
+}
+
+input,
+button{
+    font-family: inherit;
+    font-size: 100%;
+}
+
+.no-wrap{
+    white-space: nowrap;
 }
 
 
@@ -44,6 +55,9 @@
 .header{
     background-color: var(--white);
     grid-area: header;
+
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
 }
 
 .main{
@@ -68,7 +82,7 @@
     height: auto;
 }
 
-.icon img{
+.sidebar-content .icon img{
     mix-blend-mode: luminosity; 
     filter: brightness(0) invert(1);
 }
@@ -83,8 +97,90 @@
     font-weight: 600;
 }
 
+.heading-3{
+    font-size: var(--h3);
+    font-weight: 600;
+}
+
 .group-1,
 .group-2{
     display: grid;
     gap: 2em;
 }
+
+/* header */
+
+/* search-section */
+
+.search-section{
+    align-self: center;
+    margin-left: 3em;
+
+    display: flex;
+    gap: 8em;
+}
+
+.search{
+    display: flex;
+    max-width: 70%;
+    gap: 1em;
+    flex: 1;
+}
+
+.search-input{
+    background-color: var(--grey);
+    border-radius: 15px;
+    border: transparent;
+    padding: 10px;
+    flex: 1;
+}
+
+.notifications{
+    display: flex;
+    gap: 2em;
+}
+
+/* userinfo-section */
+
+.userinfo-section{
+    align-self: center;
+    justify-content: space-between;
+
+    display: flex;
+    margin-left: 3em;
+}
+
+
+.profile{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    line-height: 1.8em;
+}
+
+.profile-pic{
+    border-radius: 50%;
+}
+
+
+.buttons-container{
+    align-self: center;
+}
+
+.sky-button{
+    padding: 0.5em 1em;
+    color: var(--white);
+    font-weight: 600;
+    background-color: var(--sky);
+    width: 6rem;
+    border: none;
+    outline: none;
+    border-radius: 1em;
+    cursor: pointer;
+    margin: 0 1em;
+}
+
+.sky-button:active{
+    background-color: #0284c7;
+}
+
